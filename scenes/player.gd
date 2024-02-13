@@ -1,0 +1,18 @@
+extends CharacterBody2D
+@export var speed = 250
+@export var gravity = 10
+@export var jpForce = 300
+
+func _physics_process(delta):
+	if !is_on_floor():
+		velocity.y += gravity
+		if velocity.y > 1000:
+			velocity.y = 1000
+	
+	if Input.is_action_just_pressed("jump") && is_on_floor():
+		velocity.y = -jpForce
+	
+	var horixontal_dir = Input.get_axis("move_left", "move_right")
+	velocity.x = speed *horixontal_dir
+	move_and_slide()
+
