@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1707872959
+::res://assets/::1707865526
+::res://assets/characterImages/::1707869542
+canRollSprite.png::CompressedTexture2D::3120250790358278405::1707865526::1707873180::1::::<><>::
+Idle_Can_Sprite.png::CompressedTexture2D::8974661617192789871::1707865526::1707869542::1::::<><>::
+::res://scenes/::1707873161
+player.tscn::PackedScene::6383982365171692030::1707873161::0::1::::<><>::res://scripts/player.gd<>uid://d04nmowmdhk0n::::res://assets/characterImages/Idle_Can_Sprite.png
+world.tscn::PackedScene::3251323580713539347::1707873161::0::1::::<><>::uid://cw7piy57nhj7s::::res://scenes/player.tscn
+::res://scripts/::1707865526
+player.gd::GDScript::-1::1707865526::0::1::::<>CharacterBody2D<>::
