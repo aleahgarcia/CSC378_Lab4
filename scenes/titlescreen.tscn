@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7ppylau4gqho"]
+
+[ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_ftwue"]
+[ext_resource type="Texture2D" uid="uid://d04nmowmdhk0n" path="res://assets/characterImages/Idle_Can_Sprite.png" id="2_l6b0m"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wag3w"]
+
+[sub_resource type="Theme" id="Theme_muppy"]
+
+[sub_resource type="SystemFont" id="SystemFont_w3x70"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_kn1b3"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_2lqey"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_nmxox"]
+font_names = PackedStringArray("Impact")
+
+[node name="titlescreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ftwue")
+
+[node name="IdleCanSprite" type="Sprite2D" parent="."]
+position = Vector2(312, 221)
+scale = Vector2(9.5, 8.70312)
+texture = ExtResource("2_l6b0m")
+
+[node name="startButton" type="Button" parent="."]
+material = SubResource("CanvasItemMaterial_wag3w")
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 0
+offset_left = 257.0
+offset_top = 168.0
+offset_right = 377.0
+offset_bottom = 207.0
+theme = SubResource("Theme_muppy")
+theme_override_fonts/font = SubResource("SystemFont_w3x70")
+theme_override_font_sizes/font_size = 24
+text = "START
+"
+script = ExtResource("1_ftwue")
+
+[node name="credits" type="Button" parent="."]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 0
+offset_left = 257.0
+offset_top = 216.0
+offset_right = 377.0
+offset_bottom = 255.0
+theme_override_fonts/font = SubResource("SystemFont_kn1b3")
+theme_override_font_sizes/font_size = 24
+text = "CREDITS
+"
+
+[node name="instructions" type="Button" parent="."]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 0
+offset_left = 252.0
+offset_top = 265.0
+offset_right = 382.0
+offset_bottom = 304.0
+theme_override_fonts/font = SubResource("SystemFont_2lqey")
+theme_override_font_sizes/font_size = 24
+text = "HOW TO PLAY"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 21.0
+offset_right = 427.0
+offset_bottom = 81.0
+theme_override_fonts/font = SubResource("SystemFont_nmxox")
+theme_override_font_sizes/font_size = 48
+text = "Game Title
+"
+
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
