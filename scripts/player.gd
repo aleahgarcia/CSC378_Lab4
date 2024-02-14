@@ -9,10 +9,11 @@ func _physics_process(delta):
 		if velocity.y > 1000:
 			velocity.y = 1000
 	
-	if Input.is_action_just_pressed("jump") && is_on_floor():
+	if Input.is_action_just_pressed("ui_up") && is_on_floor():
 		velocity.y = -jpForce
 	
-	var horixontal_dir = Input.get_axis("move_left", "move_right")
-	velocity.x = speed *horixontal_dir
+	if is_on_floor():
+		velocity.x = 100;
+	#var horixontal_dir = Input.get_axis("move_left", "move_right")
 	move_and_slide()
 
