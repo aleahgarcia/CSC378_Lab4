@@ -79,13 +79,13 @@ script = ExtResource("4_a7a3w")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 219.0
-offset_top = 21.0
+offset_left = 199.0
+offset_top = 24.0
 offset_right = 427.0
-offset_bottom = 81.0
+offset_bottom = 84.0
 theme_override_fonts/font = SubResource("SystemFont_nmxox")
 theme_override_font_sizes/font_size = 48
-text = "Game Title
+text = "Soup Sprint
 "
 
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
