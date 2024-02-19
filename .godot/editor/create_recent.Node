@@ -1,1 +1,4 @@
+CollisionShape2D
+MeshInstance2D
+Node2D
 AnimationPlayer

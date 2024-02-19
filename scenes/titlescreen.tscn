@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7ppylau4gqho"]
+[gd_scene load_steps=11 format=3 uid="uid://b7ppylau4gqho"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_ftwue"]
 [ext_resource type="Texture2D" uid="uid://d04nmowmdhk0n" path="res://assets/characterImages/Idle_Can_Sprite.png" id="2_l6b0m"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="3_npaa1"]
+[ext_resource type="Script" path="res://scripts/how_to_play.gd" id="4_a7a3w"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wag3w"]
 
@@ -61,6 +63,7 @@ theme_override_fonts/font = SubResource("SystemFont_kn1b3")
 theme_override_font_sizes/font_size = 24
 text = "CREDITS
 "
+script = ExtResource("3_npaa1")
 
 [node name="instructions" type="Button" parent="."]
 custom_minimum_size = Vector2(120, 32)
@@ -72,6 +75,7 @@ offset_bottom = 304.0
 theme_override_fonts/font = SubResource("SystemFont_2lqey")
 theme_override_font_sizes/font_size = 24
 text = "HOW TO PLAY"
+script = ExtResource("4_a7a3w")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
