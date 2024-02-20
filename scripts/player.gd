@@ -16,7 +16,7 @@ func _physics_process(delta):
 		if velocity.y > 1000:
 			velocity.y = 1000
 	
-	if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("jump") && is_on_floor():
+	if (Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("jump")) && is_on_floor():
 		velocity.y = -jpForce
 	
 	if is_on_floor():
@@ -36,3 +36,12 @@ func reset_player() -> void:
 	position = Vector2(0, 0)
 	visible = true
 	canControl = true
+
+func change_level() -> void: 
+	get_tree().change_scene_to_file("res://scenes/level2.tscn")
+	
+func ending() -> void: 
+	get_tree().change_scene_to_file("res://scenes/ending.tscn")
+
+
+	

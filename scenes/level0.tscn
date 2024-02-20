@@ -412,7 +412,7 @@ size = Vector2(89, 170)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2c4fe"]
 size = Vector2(250, 169.5)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfcl6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogcgm"]
 texture = ExtResource("6_q2y22")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
@@ -637,7 +637,8 @@ texture_region_size = Vector2i(18, 18)
 21:9/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7emna"]
-sources/1 = SubResource("TileSetAtlasSource_lfcl6")
+tile_size = Vector2i(18, 18)
+sources/0 = SubResource("TileSetAtlasSource_ogcgm")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8clx6"]
 size = Vector2(23, 38)
@@ -681,7 +682,7 @@ shape = SubResource("RectangleShape2D_2c4fe")
 [node name="props" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7emna")
 format = 2
-layer_0/tile_data = PackedInt32Array(327741, 720897, 5, 393277, 720897, 6)
+layer_0/tile_data = PackedInt32Array(327741, 720897, 5, 393277, 720897, 6, 262198, 720896, 5, 327734, 720896, 6)
 
 [node name="flag" type="Area2D" parent="props"]
 script = ExtResource("7_8cy84")

@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_start_button_pressed():
-	LManager.load_level(1)
+	#LManager.load_level(1)
 	#deactivate()
 	get_tree().change_scene_to_file("res://scenes/level0.tscn")
 
