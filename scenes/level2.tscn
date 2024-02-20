@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bw2jqinnemu0n"]
+[gd_scene load_steps=19 format=3 uid="uid://bw2jqinnemu0n"]
 
 [ext_resource type="Texture2D" uid="uid://ce060lsui8c6c" path="res://assets/tilemap-backgrounds_packed.png" id="1_lvkov"]
 [ext_resource type="Texture2D" uid="uid://c8lc7crias1dy" path="res://assets/tilemap_packed.png" id="1_o3rdf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cqxght0rub7b7" path="res://assets/tilemap2_packed.png" id="3_4g682"]
 [ext_resource type="Script" path="res://scripts/deathZone.gd" id="4_0da5x"]
 [ext_resource type="Script" path="res://scripts/endFlag.gd" id="5_oont4"]
+[ext_resource type="PackedScene" uid="uid://u1g8nqlurc0" path="res://scenes/Restart.tscn" id="7_3cq6v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3hyg"]
 texture = ExtResource("1_lvkov")
@@ -1276,6 +1277,8 @@ shape = SubResource("RectangleShape2D_3e887")
 
 [node name="Player" parent="." instance=ExtResource("2_yepvp")]
 position = Vector2(-60, 115)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_3cq6v")]
 
 [connection signal="body_entered" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="ground/Area2D" to="ground/Area2D" method="_on_body_entered"]

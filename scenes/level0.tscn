@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bmk73a7ivhvyh"]
+[gd_scene load_steps=18 format=3 uid="uid://bmk73a7ivhvyh"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_hoqdv"]
 [ext_resource type="Texture2D" uid="uid://ce060lsui8c6c" path="res://assets/tilemap-backgrounds_packed.png" id="2_og03l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/deathZone.gd" id="5_vba1v"]
 [ext_resource type="Texture2D" uid="uid://cqxght0rub7b7" path="res://assets/tilemap2_packed.png" id="6_q2y22"]
 [ext_resource type="Script" path="res://scripts/flag.gd" id="7_8cy84"]
+[ext_resource type="PackedScene" uid="uid://u1g8nqlurc0" path="res://scenes/Restart.tscn" id="8_n8m6n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0q8x"]
 texture = ExtResource("2_og03l")
@@ -690,6 +691,8 @@ script = ExtResource("7_8cy84")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="props/flag"]
 position = Vector2(982.5, 94)
 shape = SubResource("RectangleShape2D_8clx6")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("8_n8m6n")]
 
 [connection signal="body_entered" from="platforms/water" to="platforms/water" method="_on_body_entered"]
 [connection signal="body_entered" from="props/flag" to="props/flag" method="_on_body_entered"]

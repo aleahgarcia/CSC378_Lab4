@@ -45,3 +45,7 @@ func ending() -> void:
 
 
 	
+
+
+func _on_reset_pressed():
+	reset_player()
