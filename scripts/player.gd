@@ -33,6 +33,6 @@ func handle_danger() -> void:
 	reset_player()
 	
 func reset_player() -> void:
-	
+	position = Vector2(0, 0)
 	visible = true
 	canControl = true
