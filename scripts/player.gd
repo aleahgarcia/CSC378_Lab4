@@ -29,7 +29,7 @@ func handle_danger() -> void:
 	canControl = false
 	visible = false
 	
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.5).timeout
 	reset_player()
 	
 func reset_player() -> void:
