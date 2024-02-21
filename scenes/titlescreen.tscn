@@ -67,7 +67,7 @@ offset_right = 377.0
 offset_bottom = 207.0
 theme = SubResource("Theme_muppy")
 theme_override_fonts/font = SubResource("SystemFont_w3x70")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "START
 "
 script = ExtResource("1_ftwue")
@@ -80,7 +80,7 @@ offset_top = 216.0
 offset_right = 377.0
 offset_bottom = 255.0
 theme_override_fonts/font = SubResource("SystemFont_kn1b3")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "CREDITS
 "
 script = SubResource("GDScript_st0fa")
@@ -88,12 +88,12 @@ script = SubResource("GDScript_st0fa")
 [node name="instructions" type="Button" parent="."]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 0
-offset_left = 252.0
-offset_top = 265.0
-offset_right = 382.0
-offset_bottom = 304.0
+offset_left = 257.0
+offset_top = 263.0
+offset_right = 377.0
+offset_bottom = 300.0
 theme_override_fonts/font = SubResource("SystemFont_2lqey")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "HOW TO PLAY"
 script = ExtResource("1_ftwue")
 

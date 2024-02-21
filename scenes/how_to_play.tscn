@@ -33,12 +33,12 @@ text = "How To Play"
 
 [node name="Label2" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 112.0
-offset_right = 475.0
-offset_bottom = 303.0
+offset_left = 146.0
+offset_top = 115.0
+offset_right = 573.0
+offset_bottom = 306.0
 theme_override_fonts/font = SubResource("SystemFont_uy2o7")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 16
 text = "Navigate through each level by using the up-arrow 
 key or space bar to jump over obstacles. Get to the 
 flag to advance to the next level ! If you find yourself 
