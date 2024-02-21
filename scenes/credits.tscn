@@ -62,14 +62,14 @@ text = "External Assets: "
 
 [node name="Label" type="Label" parent="ColorRect/assets"]
 layout_mode = 0
-offset_left = -110.0
+offset_left = -126.0
 offset_top = 51.0
-offset_right = 329.0
+offset_right = 313.0
 offset_bottom = 100.0
 theme_override_fonts/font = SubResource("SystemFont_5biyx")
 theme_override_font_sizes/font_size = 16
 text = "Created/distributed by Kenney (www.kenney.nl)
-Game sounds created/distributed by Pixabay (pixabay.com)"
+Game sounds created/distributed by Pixabay (www.pixabay.com)"
 
 [node name="tutorials" type="Label" parent="ColorRect"]
 layout_mode = 0
@@ -79,7 +79,6 @@ offset_right = 391.0
 offset_bottom = 274.0
 theme_override_fonts/font = SubResource("SystemFont_20xbb")
 theme_override_font_sizes/font_size = 24
-text = "Tutorials Used: "
 
 [node name="Label" type="Label" parent="ColorRect/tutorials"]
 layout_mode = 0

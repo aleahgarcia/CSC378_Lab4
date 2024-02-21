@@ -36,9 +36,9 @@ script = ExtResource("1_xurf1")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 98.0
+offset_left = 82.0
 offset_top = 105.0
-offset_right = 564.0
+offset_right = 548.0
 offset_bottom = 283.0
 theme_override_fonts/font = SubResource("SystemFont_w5nid")
 theme_override_font_sizes/font_size = 16
