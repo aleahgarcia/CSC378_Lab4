@@ -68,7 +68,8 @@ offset_right = 277.0
 offset_bottom = 74.0
 theme_override_fonts/font = SubResource("SystemFont_5biyx")
 theme_override_font_sizes/font_size = 18
-text = "Created/distributed by Kenney (www.kenney.nl)"
+text = "Created/distributed by Kenney (www.kenney.nl)
+Game sounds created/distributed by Pixabay (pixabay.com)"
 
 [node name="tutorials" type="Label" parent="ColorRect"]
 layout_mode = 0
