@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cath44gep7jwf"]
+[gd_scene load_steps=8 format=3 uid="uid://cath44gep7jwf"]
+
+[ext_resource type="Script" path="res://scripts/back.gd" id="1_lt57t"]
 
 [sub_resource type="SystemFont" id="SystemFont_nrydj"]
 font_names = PackedStringArray("Impact")
@@ -13,6 +15,9 @@ font_names = PackedStringArray("Impact")
 font_names = PackedStringArray("Impact")
 
 [sub_resource type="SystemFont" id="SystemFont_20xbb"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_74ota"]
 font_names = PackedStringArray("Impact")
 
 [node name="Credits" type="Control"]
@@ -81,3 +86,16 @@ offset_left = 37.0
 offset_top = 60.0
 offset_right = 77.0
 offset_bottom = 83.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 310.0
+offset_right = 98.0
+offset_bottom = 349.0
+theme_override_fonts/font = SubResource("SystemFont_74ota")
+theme_override_font_sizes/font_size = 24
+text = "BACK"
+script = ExtResource("1_lt57t")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
