@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://vq3cjc17qnkk"]
 
-[ext_resource type="Script" path="res://scenes/storyStart.gd" id="1_xurf1"]
+[ext_resource type="Script" path="res://scripts/storyStart.gd" id="1_xurf1"]
 
 [sub_resource type="SystemFont" id="SystemFont_fwf3j"]
 font_names = PackedStringArray("Impact")
