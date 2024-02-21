@@ -7,9 +7,14 @@ extends CharacterBody2D
 
 var canControl: bool = true
 var jumpSound
+var backgroundMusic
+var deathSound
 
 func _ready():
 	jumpSound = $jump
+	backgroundMusic = $background
+	deathSound = $death
+	backgroundMusic.play()
 	
 func _physics_process(delta):
 	#check for death
@@ -32,6 +37,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func handle_danger() -> void: 
+	deathSound.play()
 	print("player death")
 	canControl = false
 	visible = false
@@ -44,7 +50,7 @@ func reset_player() -> void:
 	visible = true
 	canControl = true
 
-func change_level() -> void: 
+func change_level() -> void:
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
 	
 func ending() -> void: 
