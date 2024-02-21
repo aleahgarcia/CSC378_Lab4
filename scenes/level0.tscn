@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scripts/deathZone.gd" id="5_vba1v"]
 [ext_resource type="Texture2D" uid="uid://cqxght0rub7b7" path="res://assets/tilemap2_packed.png" id="6_q2y22"]
 [ext_resource type="Script" path="res://scripts/flag.gd" id="7_8cy84"]
-[ext_resource type="PackedScene" path="res://scenes/Restart.tscn" id="8_n8m6n"]
+[ext_resource type="PackedScene" uid="uid://beaq7e4wrtndm" path="res://scenes/Restart.tscn" id="8_n8m6n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0q8x"]
 texture = ExtResource("2_og03l")
