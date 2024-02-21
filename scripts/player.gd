@@ -4,7 +4,9 @@ extends CharacterBody2D
 @export var gravity = 10
 @export var jpForce = 300
 
+
 var canControl: bool = true
+
 
 func _physics_process(delta):
 	#check for death
@@ -45,7 +47,3 @@ func ending() -> void:
 
 
 	
-
-
-func _on_reset_pressed():
-	reset_player()
