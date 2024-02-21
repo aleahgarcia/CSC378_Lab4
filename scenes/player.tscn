@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_p7ny8"]
 [ext_resource type="Texture2D" uid="uid://bkpqcsj061gnt" path="res://assets/characterImages/canRollSprite.png" id="2_ruoag"]
 [ext_resource type="AudioStream" uid="uid://c5scwo40xsuvs" path="res://audio/jump.mp3" id="3_gqw4p"]
-[ext_resource type="AudioStream" uid="uid://ddtfqrmdpgd71" path="res://audio/background.mp3" id="4_05kx4"]
+[ext_resource type="AudioStream" uid="uid://ddtfqrmdpgd71" path="res://audio/background.mp3" id="4_0dytu"]
 [ext_resource type="AudioStream" uid="uid://bpp1x370tv3c7" path="res://audio/death.mp3" id="5_8fwg8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhp7v"]
@@ -145,7 +145,7 @@ autoplay = "rolling"
 stream = ExtResource("3_gqw4p")
 
 [node name="background" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_05kx4")
+stream = ExtResource("4_0dytu")
 volume_db = -19.676
 
 [node name="death" type="AudioStreamPlayer2D" parent="."]

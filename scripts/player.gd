@@ -38,6 +38,7 @@ func _physics_process(delta):
 
 func handle_danger() -> void: 
 	deathSound.play()
+	backgroundMusic.play()
 	print("player death")
 	canControl = false
 	visible = false
