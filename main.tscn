@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhhkyrl37f65c"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_qcgpp"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_ix55s"]
+[ext_resource type="PackedScene" uid="uid://b7ppylau4gqho" path="res://scenes/titlescreen.tscn" id="3_1rucw"]
+
+[sub_resource type="Resource" id="Resource_2d75a"]
+script = ExtResource("2_ix55s")
+level_id = 1
+level_name = "First"
+level_path = "/level0"
+
+[node name="Main" type="Node"]
+script = ExtResource("1_qcgpp")
+available_levels = Array[ExtResource("2_ix55s")]([SubResource("Resource_2d75a")])
+
+[node name="UIMain" type="CanvasLayer" parent="."]
+
+[node name="titlescreen" parent="UIMain" instance=ExtResource("3_1rucw")]
+
+[node name="2DScene" type="Node2D" parent="."]

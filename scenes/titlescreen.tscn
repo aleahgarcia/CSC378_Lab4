@@ -1,9 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7ppylau4gqho"]
+[gd_scene load_steps=10 format=3 uid="uid://b7ppylau4gqho"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_ftwue"]
 [ext_resource type="Texture2D" uid="uid://d04nmowmdhk0n" path="res://assets/characterImages/Idle_Can_Sprite.png" id="2_l6b0m"]
-[ext_resource type="Script" path="res://scripts/credits.gd" id="3_npaa1"]
-[ext_resource type="Script" path="res://scripts/how_to_play.gd" id="4_a7a3w"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wag3w"]
 
@@ -11,15 +9,29 @@
 
 [sub_resource type="SystemFont" id="SystemFont_w3x70"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_kn1b3"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="GDScript" id="GDScript_st0fa"]
+script/source = "extends Control
+
+
+
+func _on_start_button_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/credits.tscn\")
+
+"
 
 [sub_resource type="SystemFont" id="SystemFont_2lqey"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_nmxox"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [node name="titlescreen" type="Control"]
 layout_mode = 3
@@ -31,6 +43,14 @@ offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ftwue")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 643.0
+offset_bottom = 366.0
+color = Color(0.54902, 0.843137, 0.87451, 1)
 
 [node name="IdleCanSprite" type="Sprite2D" parent="."]
 position = Vector2(312, 221)
@@ -63,7 +83,7 @@ theme_override_fonts/font = SubResource("SystemFont_kn1b3")
 theme_override_font_sizes/font_size = 24
 text = "CREDITS
 "
-script = ExtResource("3_npaa1")
+script = SubResource("GDScript_st0fa")
 
 [node name="instructions" type="Button" parent="."]
 custom_minimum_size = Vector2(120, 32)
@@ -75,7 +95,7 @@ offset_bottom = 304.0
 theme_override_fonts/font = SubResource("SystemFont_2lqey")
 theme_override_font_sizes/font_size = 24
 text = "HOW TO PLAY"
-script = ExtResource("4_a7a3w")
+script = ExtResource("1_ftwue")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -89,3 +109,5 @@ text = "Soup Sprint
 "
 
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="instructions" to="instructions" method="_on_pressed"]

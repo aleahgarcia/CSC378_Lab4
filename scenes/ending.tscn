@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh1ar8cly31dj"]
+
+[sub_resource type="SystemFont" id="SystemFont_btgf6"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_n3j3r"]
+font_names = PackedStringArray("Impact")
+
+[node name="ending" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 662.0
+offset_bottom = 416.0
+color = Color(0.713726, 0.909804, 0.933333, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 106.0
+offset_right = 514.0
+offset_bottom = 166.0
+theme_override_fonts/font = SubResource("SystemFont_btgf6")
+theme_override_font_sizes/font_size = 48
+text = "To Be Continued ..."
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 201.0
+offset_right = 400.0
+offset_bottom = 232.0
+theme_override_fonts/font = SubResource("SystemFont_n3j3r")
+theme_override_font_sizes/font_size = 24
+text = "Refresh to Restart"

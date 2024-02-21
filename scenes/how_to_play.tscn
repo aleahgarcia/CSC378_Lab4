@@ -1,3 +1,59 @@
-[gd_scene format=3 uid="uid://ca5lretxdcgqm"]
+[gd_scene load_steps=5 format=3 uid="uid://ca5lretxdcgqm"]
 
-[node name="HowToPlay" type="Node2D"]
+[ext_resource type="Script" path="res://scripts/back.gd" id="1_b7no5"]
+
+[sub_resource type="SystemFont" id="SystemFont_yfaa3"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_uy2o7"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_40j76"]
+font_names = PackedStringArray("Impact")
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 664.0
+offset_bottom = 397.0
+color = Color(0.302475, 0.291526, 0.303501, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 22.0
+offset_right = 432.0
+offset_bottom = 82.0
+theme_override_fonts/font = SubResource("SystemFont_yfaa3")
+theme_override_font_sizes/font_size = 48
+text = "How To Play"
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 112.0
+offset_right = 475.0
+offset_bottom = 303.0
+theme_override_fonts/font = SubResource("SystemFont_uy2o7")
+theme_override_font_sizes/font_size = 24
+text = "Navigate through each level by using the up-arrow 
+key or space bar to jump over obstacles. Get to the 
+flag to advance to the next level ! If you find yourself 
+stuck you can restart the level by using the button in
+the bottom left corner"
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 313.0
+offset_right = 101.0
+offset_bottom = 352.0
+theme_override_fonts/font = SubResource("SystemFont_40j76")
+theme_override_font_sizes/font_size = 24
+text = "BACK"
+script = ExtResource("1_b7no5")
+
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_pressed"]
