@@ -25,6 +25,7 @@ func _physics_process(delta):
 		velocity.y = -jpForce
 		jumpSound.play()
 	
+	
 	if is_on_floor():
 		velocity.x = 100;
 	#var horixontal_dir = Input.get_axis("move_left", "move_right")
