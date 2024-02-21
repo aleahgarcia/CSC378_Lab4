@@ -1,8 +1,10 @@
+res://scenes/credits.tscn
 res://scenes/player.tscn
 res://scenes/world.tscn
 res://scenes/titlescreen.tscn
-res://scenes/credits.tscn
 res://scenes/how_to_play.tscn
 res://scenes/level0.tscn
 res://scenes/level2.tscn
-res://scripts/player.gd
+res://scenes/story.tscn
+res://scenes/ending.tscn
+res://scenes/Restart.tscn
