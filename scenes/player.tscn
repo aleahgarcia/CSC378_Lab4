@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cw7piy57nhj7s"]
+[gd_scene load_steps=8 format=3 uid="uid://cw7piy57nhj7s"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_p7ny8"]
 [ext_resource type="Texture2D" uid="uid://bkpqcsj061gnt" path="res://assets/characterImages/canRollSprite.png" id="2_ruoag"]
+[ext_resource type="AudioStream" uid="uid://c5scwo40xsuvs" path="res://audio/jump.mp3" id="3_gqw4p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhp7v"]
 size = Vector2(29, 30)
@@ -137,3 +138,6 @@ libraries = {
 "": SubResource("AnimationLibrary_qk56d")
 }
 autoplay = "rolling"
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_gqw4p")
