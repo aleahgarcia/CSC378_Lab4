@@ -1,3 +1,9 @@
+ColorRect
+Control
+Label
+TextEdit
+NinePatchRect
+Sprite2D
 Button
 AudioStreamPlayer2D
 AudioStreamPlayer
