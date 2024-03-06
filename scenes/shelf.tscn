@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvp3v25dj5qys"]
+
+[ext_resource type="Texture2D" uid="uid://baumukj8k1k7g" path="res://assets/shelf.png" id="1_87kyf"]
+
+[node name="Shelf" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(223, 205.5)
+scale = Vector2(14.9375, 13.8438)
+texture = ExtResource("1_87kyf")

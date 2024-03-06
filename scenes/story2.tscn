@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4d4cn7nutesm"]
+[gd_scene load_steps=8 format=3 uid="uid://bherb0b67jdjf"]
 
-[ext_resource type="Script" path="res://scripts/storyStart.gd" id="1_xurf1"]
-[ext_resource type="Texture2D" uid="uid://baumukj8k1k7g" path="res://assets/shelf.png" id="2_fi820"]
-[ext_resource type="Texture2D" uid="uid://d04nmowmdhk0n" path="res://assets/characterImages/Idle_Can_Sprite.png" id="3_fyoy8"]
-[ext_resource type="Texture2D" uid="uid://dda0hq85tt3aw" path="res://assets/girl.png" id="4_kklfp"]
+[ext_resource type="Script" path="res://scripts/storyStart2.gd" id="1_2nyx5"]
+[ext_resource type="Texture2D" uid="uid://baumukj8k1k7g" path="res://assets/shelf.png" id="2_cme44"]
+[ext_resource type="Texture2D" uid="uid://d04nmowmdhk0n" path="res://assets/characterImages/Idle_Can_Sprite.png" id="3_hlmxb"]
+[ext_resource type="Texture2D" uid="uid://dda0hq85tt3aw" path="res://assets/girl.png" id="4_51icl"]
 
 [sub_resource type="SystemFont" id="SystemFont_fwf3j"]
 font_names = PackedStringArray("Impact")
@@ -29,6 +29,7 @@ offset_bottom = 358.0
 color = Color(0.568627, 0.639216, 0.403922, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = 268.0
 offset_right = 637.0
@@ -43,9 +44,8 @@ offset_right = 627.0
 offset_bottom = 350.0
 theme_override_fonts/font = SubResource("SystemFont_fwf3j")
 theme_override_font_sizes/font_size = 20
-text = "NEXT
-"
-script = ExtResource("1_xurf1")
+text = "NEXT"
+script = ExtResource("1_2nyx5")
 
 [node name="Label" type="Label" parent="Control"]
 visible = false
@@ -75,17 +75,17 @@ color = Color(0.67451, 0.67451, 0.67451, 1)
 [node name="shelf" type="Sprite2D" parent="."]
 position = Vector2(341.5, 162)
 scale = Vector2(45.5938, 10.75)
-texture = ExtResource("2_fi820")
+texture = ExtResource("2_cme44")
 
 [node name="can" type="Sprite2D" parent="."]
 position = Vector2(209, 84)
 scale = Vector2(1.21875, 1.25)
-texture = ExtResource("3_fyoy8")
+texture = ExtResource("3_hlmxb")
 
 [node name="Girl" type="Sprite2D" parent="."]
 position = Vector2(166, 244)
 scale = Vector2(2.64844, 2.67578)
-texture = ExtResource("4_kklfp")
+texture = ExtResource("4_51icl")
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
@@ -95,22 +95,22 @@ offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="Control2"]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 124.0
-offset_right = 134.0
-offset_bottom = 200.0
+offset_left = 371.0
+offset_top = 123.0
+offset_right = 455.0
+offset_bottom = 199.0
 
 [node name="label" type="Label" parent="Control2"]
-offset_left = 54.0
-offset_top = 131.0
-offset_right = 188.0
-offset_bottom = 196.0
+layout_mode = 0
+offset_left = 375.0
+offset_top = 130.0
+offset_right = 509.0
+offset_bottom = 195.0
 theme = SubResource("Theme_n6whc")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-text = "\"Mom, can we 
-please get 
-this can 
-of soup?\""
+text = "\"No, we can't 
+honey. We can't
+afford that.\""
 
 [connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
