@@ -10,6 +10,7 @@ var jumpSound
 var backgroundMusic
 var deathSound
 
+
 func _ready():
 	jumpSound = $jump
 	backgroundMusic = $background
@@ -55,11 +56,17 @@ func reset_player() -> void:
 	visible = true
 	canControl = true
 
-func change_level() -> void:
+func change_level_0() -> void:
+	get_tree().change_scene_to_file("res://scenes/level0.tscn")
+	
+func change_level_2() -> void:
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
 	
 func ending() -> void: 
 	get_tree().change_scene_to_file("res://scenes/ending.tscn")
+	
+
+	
 
 
 	

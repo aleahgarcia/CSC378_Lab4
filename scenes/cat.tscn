@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://1nlsh142dev5"]
+
+[ext_resource type="Texture2D" uid="uid://e2g52pkgqohn" path="res://assets/cat/cat_attack (2).png" id="1_erpyg"]
+[ext_resource type="Texture2D" uid="uid://mk5dtlkww4bv" path="res://assets/cat/cat_idle.png" id="2_mfxip"]
+[ext_resource type="Script" path="res://scenes/catCollider.gd" id="2_mht7s"]
+[ext_resource type="Texture2D" uid="uid://cme564l6qu5t7" path="res://assets/cat/cat_walking.png.png" id="3_0hto8"]
+[ext_resource type="Script" path="res://scripts/cat.gd" id="4_sng2k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ls34"]
+atlas = ExtResource("1_erpyg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crr0h"]
+atlas = ExtResource("1_erpyg")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxvjs"]
+atlas = ExtResource("2_mfxip")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmir2"]
+atlas = ExtResource("2_mfxip")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52aqg"]
+atlas = ExtResource("3_0hto8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jlw7"]
+atlas = ExtResource("3_0hto8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o77v3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ls34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crr0h")
+}],
+"loop": true,
+"name": &"cat_attack",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxvjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmir2")
+}],
+"loop": true,
+"name": &"cat_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52aqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jlw7")
+}],
+"loop": true,
+"name": &"cat_walk",
+"speed": 5.0
+}]
+
+[node name="Cat" type="Node2D"]
+script = ExtResource("4_sng2k")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(-8, -9, -2, -9, 1, -5, 1, 1, 7, 1, 7, 0, 9, -2, 13, -2, 13, 1, 10, 2, 7, 6, 6, 9, -10, 9, -10, -6)
+script = ExtResource("2_mht7s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_o77v3")
+animation = &"cat_attack"
+frame_progress = 0.785824
