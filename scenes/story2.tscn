@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/storyStart2.gd" id="1_2nyx5"]
 [ext_resource type="Texture2D" uid="uid://baumukj8k1k7g" path="res://assets/shelf.png" id="2_cme44"]
 [ext_resource type="Texture2D" uid="uid://d04nmowmdhk0n" path="res://assets/characterImages/Idle_Can_Sprite.png" id="3_hlmxb"]
-[ext_resource type="Texture2D" uid="uid://dda0hq85tt3aw" path="res://assets/girl.png" id="4_51icl"]
+[ext_resource type="Texture2D" uid="uid://cyg2gwuyk0ilc" path="res://assets/girl_sad.png" id="5_0rey5"]
 [ext_resource type="Texture2D" uid="uid://dw82nboh1nacq" path="res://assets/mother.png" id="5_rrnj0"]
 
 [sub_resource type="SystemFont" id="SystemFont_fwf3j"]
@@ -83,11 +83,6 @@ position = Vector2(209, 84)
 scale = Vector2(1.21875, 1.25)
 texture = ExtResource("3_hlmxb")
 
-[node name="Girl" type="Sprite2D" parent="."]
-position = Vector2(166, 244)
-scale = Vector2(2.64844, 2.67578)
-texture = ExtResource("4_51icl")
-
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -118,5 +113,10 @@ afford that.\""
 position = Vector2(302, 231)
 scale = Vector2(2.70312, 2.59375)
 texture = ExtResource("5_rrnj0")
+
+[node name="GirlSad" type="Sprite2D" parent="."]
+position = Vector2(177, 251)
+scale = Vector2(2.76562, 2.5)
+texture = ExtResource("5_0rey5")
 
 [connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
