@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cw7piy57nhj7s"]
+[gd_scene load_steps=16 format=3 uid="uid://cw7piy57nhj7s"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_p7ny8"]
 [ext_resource type="Texture2D" uid="uid://wgehakes1alg" path="res://assets/characterImages/pixelCanRoll.png" id="2_4bi7m"]
@@ -94,11 +94,60 @@ _data = {
 "rolling": SubResource("Animation_ul8s0")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovm0a"]
+atlas = ExtResource("2_4bi7m")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pprnh"]
+atlas = ExtResource("2_4bi7m")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_so3tg"]
+atlas = ExtResource("2_4bi7m")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shh0y"]
+atlas = ExtResource("2_4bi7m")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22d6k"]
+atlas = ExtResource("2_4bi7m")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vdikx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovm0a")
+}],
+"loop": true,
+"name": &"can_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pprnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_so3tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shh0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22d6k")
+}],
+"loop": true,
+"name": &"can_rolling",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-3, 16)
 script = ExtResource("1_p7ny8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(3, -28)
 scale = Vector2(0.507, 0.5)
 texture = ExtResource("2_4bi7m")
@@ -127,3 +176,10 @@ volume_db = -19.676
 
 [node name="death" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_8fwg8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -28)
+scale = Vector2(0.5625, 0.5625)
+sprite_frames = SubResource("SpriteFrames_vdikx")
+animation = &"can_idle"
+frame_progress = 0.104542

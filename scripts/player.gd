@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var gravity = 10
 @export var jpForce = 300
 
-
+@onready var animation = $AnimatedSprite2D
 var canControl: bool = true
 var jumpSound
 var backgroundMusic
@@ -16,12 +16,16 @@ func _ready():
 	backgroundMusic = $background
 	deathSound = $death
 	backgroundMusic.play()
+	animation.play("can_idle")
 	
 func _physics_process(delta):
 	#check for death
 	if not canControl: 
 		return
 		
+	if velocity.x == 0: 
+		animation.play("can_idle")
+	
 	if !is_on_floor():
 		velocity.y += gravity
 		if velocity.y > 1000:
@@ -33,9 +37,12 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
+		animation.play("can_rolling")
 	
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 1
+		animation.play("can_rolling")
+
 	
 	#var horixontal_dir = Input.get_axis("move_left", "move_right")
 	move_and_slide()

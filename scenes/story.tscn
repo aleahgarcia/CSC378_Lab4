@@ -103,16 +103,14 @@ offset_bottom = 200.0
 
 [node name="label" type="Label" parent="Control2"]
 layout_mode = 0
-offset_left = 54.0
+offset_left = 56.0
 offset_top = 131.0
-offset_right = 188.0
-offset_bottom = 196.0
+offset_right = 128.0
+offset_bottom = 192.0
 theme = SubResource("Theme_n6whc")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 3
-text = "\"Mom, can we 
-please get 
-this can 
-of soup?\""
+theme_override_font_sizes/font_size = 8
+text = "\"Mom, can we please get this can of soup?\""
+autowrap_mode = 3
 
 [connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
