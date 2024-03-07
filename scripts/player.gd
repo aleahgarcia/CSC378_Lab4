@@ -29,10 +29,13 @@ func _physics_process(delta):
 	if (Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("jump")) && is_on_floor():
 		velocity.y = -jpForce
 		jumpSound.play()
+		
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = 100
 	
+	if Input.is_action_pressed("ui_left"):
+		velocity.x = -100
 	
-	if is_on_floor():
-		velocity.x = 100;
 	#var horixontal_dir = Input.get_axis("move_left", "move_right")
 	move_and_slide()
 
@@ -48,6 +51,7 @@ func handle_danger() -> void:
 	
 func reset_player() -> void:
 	position = Vector2(0, 0)
+	velocity.x = 0
 	visible = true
 	canControl = true
 
