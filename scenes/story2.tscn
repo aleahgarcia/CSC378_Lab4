@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bherb0b67jdjf"]
+[gd_scene load_steps=9 format=3 uid="uid://bherb0b67jdjf"]
 
 [ext_resource type="Script" path="res://scripts/storyStart2.gd" id="1_2nyx5"]
 [ext_resource type="Texture2D" uid="uid://baumukj8k1k7g" path="res://assets/shelf.png" id="2_cme44"]
 [ext_resource type="Texture2D" uid="uid://d04nmowmdhk0n" path="res://assets/characterImages/Idle_Can_Sprite.png" id="3_hlmxb"]
 [ext_resource type="Texture2D" uid="uid://dda0hq85tt3aw" path="res://assets/girl.png" id="4_51icl"]
+[ext_resource type="Texture2D" uid="uid://dw82nboh1nacq" path="res://assets/mother.png" id="5_rrnj0"]
 
 [sub_resource type="SystemFont" id="SystemFont_fwf3j"]
 font_names = PackedStringArray("Impact")
@@ -90,7 +91,7 @@ texture = ExtResource("4_51icl")
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = -40.0
 offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="Control2"]
@@ -112,5 +113,10 @@ theme_override_font_sizes/font_size = 10
 text = "\"No, we can't 
 honey. We can't
 afford that.\""
+
+[node name="Mother" type="Sprite2D" parent="."]
+position = Vector2(302, 231)
+scale = Vector2(2.70312, 2.59375)
+texture = ExtResource("5_rrnj0")
 
 [connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
