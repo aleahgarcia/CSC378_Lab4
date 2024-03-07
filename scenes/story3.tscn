@@ -102,7 +102,7 @@ offset_right = 407.0
 offset_bottom = 78.0
 theme = SubResource("Theme_n6whc")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 3
 text = "\"I must go and 
 make that little
 girl happy.\""
