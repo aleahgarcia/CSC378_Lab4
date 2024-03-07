@@ -31,10 +31,10 @@ func _physics_process(delta):
 		jumpSound.play()
 		
 	if Input.is_action_pressed("ui_right"):
-		velocity.x = 100
+		velocity.x += 1
 	
 	if Input.is_action_pressed("ui_left"):
-		velocity.x = -100
+		velocity.x -= 1
 	
 	#var horixontal_dir = Input.get_axis("move_left", "move_right")
 	move_and_slide()
