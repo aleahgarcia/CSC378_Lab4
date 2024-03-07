@@ -115,8 +115,8 @@ scale = Vector2(2.70312, 2.59375)
 texture = ExtResource("5_rrnj0")
 
 [node name="GirlSad" type="Sprite2D" parent="."]
-position = Vector2(177, 251)
-scale = Vector2(2.76562, 2.5)
+position = Vector2(166, 244)
+scale = Vector2(2.64194, 2.676)
 texture = ExtResource("5_0rey5")
 
 [connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
