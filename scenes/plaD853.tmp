@@ -171,7 +171,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"can_rolling_fast",
-"speed": 9.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -205,7 +205,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"can_rolling_slow",
-"speed": 3.0
+"speed": 4.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -213,6 +213,9 @@ position = Vector2(-3, 16)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_p7ny8")
+speed = null
+gravity = null
+jpForce = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -249,5 +252,5 @@ stream = ExtResource("5_8fwg8")
 position = Vector2(3, -28)
 scale = Vector2(0.5625, 0.5625)
 sprite_frames = SubResource("SpriteFrames_vdikx")
-animation = &"can_rolling_slow"
-frame_progress = 0.922205
+animation = &"can_rolling_fast"
+frame_progress = 0.0696107

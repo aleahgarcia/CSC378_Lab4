@@ -37,11 +37,21 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 3
-		animation.play("can_rolling")
+		if velocity.x > 0 and velocity.x < 15:
+			animation.play("can_rolling_slow")
+		elif velocity.x >= 15 and velocity.x < 30:
+			animation.play("can_rolling_medium")
+		else: 
+			animation.play("can_rolling_fast")
 	
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 3
-		animation.play("can_rolling")
+		if velocity.x < 0 and velocity.x > -15:
+			animation.play("can_rolling_slow")
+		elif velocity.x <= -15 and velocity.x > -30:
+			animation.play("can_rolling_medium")
+		else: 
+			animation.play("can_rolling_fast")
 
 	
 	#var horixontal_dir = Input.get_axis("move_left", "move_right")
@@ -68,6 +78,9 @@ func change_level_0() -> void:
 	
 func change_level_2() -> void:
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
+	
+func change_level_3() -> void:
+	get_tree().change_scene_to_file("res://scenes/level3.tscn")
 	
 func ending() -> void: 
 	get_tree().change_scene_to_file("res://scenes/ending.tscn")

@@ -4,4 +4,4 @@ extends Area2D
 func _on_body_entered(body):
 	if body is Player:
 		print("changing level")
-		body.change_level_3()
+		body.change_level_2()

@@ -19,9 +19,11 @@ func _physics_process(delta):
 		if player.position.x < position.x:
 			animation.play("cat_walk_left")			
 			position.x -= 2
-		else: 
+		elif player.position.x > position.x: 
 			animation.play("cat_walk_right")
 			position.x += 2
+		else:
+			animation.play("cat_idle")
 	move_and_slide()
 
 
@@ -31,7 +33,7 @@ func _on_chase_area_body_entered(body):
 	player = body
 	isChasing = true
 	
-func _on_attack_area_body_exited(body):
+func _on_chase_area_body_exited(body):
 	print("body exited")
 	player = null
 	isChasing = false
@@ -42,6 +44,7 @@ func _on_attack_area_body_exited(body):
 func _on_attack_area_body_entered(body):
 	if body is Player:
 		position.x = initialPosition
+		position.y = 0
 		player = null
 		isChasing = false
 		animation.play("cat_idle")
