@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://1nlsh142dev5"]
+[gd_scene load_steps=14 format=3 uid="uid://1nlsh142dev5"]
 
 [ext_resource type="Texture2D" uid="uid://e2g52pkgqohn" path="res://assets/cat/cat_attack (2).png" id="1_erpyg"]
 [ext_resource type="Texture2D" uid="uid://mk5dtlkww4bv" path="res://assets/cat/cat_idle.png" id="2_mfxip"]
@@ -66,17 +66,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Cat" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_pdsle"]
+radius = 155.052
+
+[node name="Cat" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("4_sng2k")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_o77v3")
+animation = &"cat_walk"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-8, -9, -2, -9, 1, -5, 1, 1, 7, 1, 7, 0, 9, -2, 13, -2, 13, 1, 10, 2, 7, 6, 6, 9, -10, 9, -10, -6)
 script = ExtResource("2_mht7s")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_o77v3")
-animation = &"cat_attack"
-frame_progress = 0.785824
+[node name="chase_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chase_area"]
+shape = SubResource("CircleShape2D_pdsle")
+
+[connection signal="body_entered" from="chase_area" to="." method="_on_chase_area_body_entered"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7o318ooi8omd"]
+
+[ext_resource type="Texture2D" uid="uid://mk5dtlkww4bv" path="res://assets/cat/cat_idle.png" id="1_ysy5k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jdxi"]
+atlas = ExtResource("1_ysy5k")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0wab"]
+atlas = ExtResource("1_ysy5k")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oghqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jdxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0wab")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cat2" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(17, 18)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+position = Vector2(63, 41)
+sprite_frames = SubResource("SpriteFrames_oghqp")
+frame_progress = 0.81552
