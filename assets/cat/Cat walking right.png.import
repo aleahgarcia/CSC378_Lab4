@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cme564l6qu5t7"
-path="res://.godot/imported/cat_walking.png.png-30274d27c1fb6939707664fa57032cc5.ctex"
+uid="uid://335p56y5r683"
+path="res://.godot/imported/Cat walking right.png-ec10afd227f472329b6503a78754eb41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cat/cat_walking.png.png"
-dest_files=["res://.godot/imported/cat_walking.png.png-30274d27c1fb6939707664fa57032cc5.ctex"]
+source_file="res://assets/cat/Cat walking right.png"
+dest_files=["res://.godot/imported/Cat walking right.png-ec10afd227f472329b6503a78754eb41.ctex"]
 
 [params]
 

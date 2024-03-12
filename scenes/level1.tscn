@@ -988,7 +988,7 @@ shape = SubResource("RectangleShape2D_20ese")
 position = Vector2(20, -25)
 
 [node name="Cat" parent="." instance=ExtResource("4_lu62p")]
-position = Vector2(697, -55)
+position = Vector2(297, -53)
 scale = Vector2(2.5, 2.5)
 
 [connection signal="body_entered" from="Flag/flag" to="Flag/flag" method="_on_body_entered"]
