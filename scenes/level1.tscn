@@ -1,15 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://bs8sbd220ufl1"]
+[gd_scene load_steps=20 format=3 uid="uid://bs8sbd220ufl1"]
 
 [ext_resource type="Texture2D" uid="uid://cqxght0rub7b7" path="res://assets/tilemap2_packed.png" id="1_20b0l"]
 [ext_resource type="Texture2D" uid="uid://ce060lsui8c6c" path="res://assets/tilemap-backgrounds_packed.png" id="1_wsnb8"]
 [ext_resource type="Texture2D" uid="uid://c8lc7crias1dy" path="res://assets/tilemap_packed.png" id="2_0mvp1"]
 [ext_resource type="PackedScene" uid="uid://cw7piy57nhj7s" path="res://scenes/player.tscn" id="3_mqd6o"]
-[ext_resource type="Texture2D" uid="uid://dnxfmfsmxajnc" path="res://assets/catSign.png" id="4_3cg8w"]
-[ext_resource type="Texture2D" uid="uid://chjllscphdoqa" path="res://assets/trashSign.png" id="4_a2qc5"]
+[ext_resource type="Texture2D" uid="uid://b60smyyihqobr" path="res://assets/catSign.png" id="4_3cg8w"]
+[ext_resource type="Texture2D" uid="uid://trvsk4r6oayt" path="res://assets/trashSign.png" id="4_a2qc5"]
 [ext_resource type="PackedScene" uid="uid://1nlsh142dev5" path="res://scenes/cat.tscn" id="4_lu62p"]
 [ext_resource type="Script" path="res://scenes/flag_1.gd" id="4_qay50"]
-[ext_resource type="Texture2D" uid="uid://bfacabgxw2807" path="res://assets/market.png" id="6_pbkab"]
+[ext_resource type="Texture2D" uid="uid://cfnahb257k5no" path="res://assets/market.png" id="6_pbkab"]
 [ext_resource type="Texture2D" uid="uid://cwkxquuqhc478" path="res://assets/trashcan.png" id="8_c6hi0"]
+[ext_resource type="PackedScene" uid="uid://beaq7e4wrtndm" path="res://scenes/Restart.tscn" id="10_ka4a8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1l0w"]
 texture = ExtResource("1_20b0l")
@@ -1409,6 +1410,8 @@ position = Vector2(20, -25)
 [node name="Cat" parent="." instance=ExtResource("4_lu62p")]
 position = Vector2(297, -53)
 scale = Vector2(2.5, 2.5)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("10_ka4a8")]
 
 [node name="trashcans" type="Node" parent="."]
 

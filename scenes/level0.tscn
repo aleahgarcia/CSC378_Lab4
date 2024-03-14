@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scripts/flag.gd" id="7_8cy84"]
 [ext_resource type="PackedScene" uid="uid://beaq7e4wrtndm" path="res://scenes/Restart.tscn" id="8_n8m6n"]
 [ext_resource type="Texture2D" uid="uid://cwkxquuqhc478" path="res://assets/trashcan.png" id="9_q2lm2"]
-[ext_resource type="Texture2D" uid="uid://bg3t0ckx3lpwl" path="res://assets/waterSign.png" id="10_p5j2e"]
+[ext_resource type="Texture2D" uid="uid://csp0uhd0yotk1" path="res://assets/waterSign.png" id="10_p5j2e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlibb"]
 texture = ExtResource("4_2xl2g")

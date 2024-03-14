@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://duycmninh6coe"]
+[gd_scene load_steps=15 format=3 uid="uid://duycmninh6coe"]
 
 [ext_resource type="Texture2D" uid="uid://cqxght0rub7b7" path="res://assets/tilemap2_packed.png" id="1_yb5yf"]
 [ext_resource type="Texture2D" uid="uid://b648gve06tvrh" path="res://assets/TX Village Props.png" id="2_ynil1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cw7piy57nhj7s" path="res://scenes/player.tscn" id="3_d4r0f"]
 [ext_resource type="PackedScene" uid="uid://1nlsh142dev5" path="res://scenes/cat.tscn" id="4_e18us"]
 [ext_resource type="Script" path="res://scenes/flag3.gd" id="5_vtbir"]
+[ext_resource type="PackedScene" uid="uid://beaq7e4wrtndm" path="res://scenes/Restart.tscn" id="7_w4q83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b2u7s"]
 texture = ExtResource("1_yb5yf")
@@ -9728,5 +9729,7 @@ script = ExtResource("5_vtbir")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flag"]
 position = Vector2(1270, -449)
 shape = SubResource("RectangleShape2D_58bml")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_w4q83")]
 
 [connection signal="body_entered" from="flag" to="flag" method="_on_body_entered"]
