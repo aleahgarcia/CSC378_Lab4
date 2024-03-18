@@ -1,9 +1,0 @@
-TileMap
-CollisionShape2D
-Area2D
-Button
-AudioStreamPlayer2D
-AudioStreamPlayer
-MeshInstance2D
-Node2D
-AnimationPlayer
