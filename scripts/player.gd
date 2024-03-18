@@ -82,6 +82,9 @@ func change_level_2() -> void:
 func change_level_3() -> void:
 	get_tree().change_scene_to_file("res://scenes/level3.tscn")
 	
+func change_level_4() -> void:
+	get_tree().change_scene_to_file("res://scenes/level4.tscn")
+	
 func ending() -> void: 
 	get_tree().change_scene_to_file("res://scenes/ending.tscn")
 	
@@ -90,3 +93,7 @@ func ending() -> void:
 
 
 	
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.
