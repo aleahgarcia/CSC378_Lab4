@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
+var initial_position = Vector2(0,0)
+
 func _ready():
-	pass
+	initial_position = position
 
 func _process(delta):
-	# Move left
-	velocity.x = -100 # Adjust the speed as needed
+	velocity.x = -100 
 	move_and_collide(velocity * delta)
 
-func _on_attack_area_body_entered_car(body):
-	if body is Player:
-		body.handle_danger()
+func reset_position():
+	var character_body = get_parent()
+	character_body.reset_all_cars()

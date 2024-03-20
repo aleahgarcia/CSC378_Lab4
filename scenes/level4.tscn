@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://4ekigg2dgusi"]
+[gd_scene load_steps=23 format=3 uid="uid://4ekigg2dgusi"]
 
 [ext_resource type="Texture2D" uid="uid://ce060lsui8c6c" path="res://assets/tilemap-backgrounds_packed.png" id="1_0u87m"]
 [ext_resource type="Texture2D" uid="uid://cqxght0rub7b7" path="res://assets/tilemap2_packed.png" id="2_n3v1f"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dxphsurkqgbal" path="res://assets/car.png" id="5_u1ptu"]
 [ext_resource type="Script" path="res://scripts/car.gd" id="7_kxgkk"]
 [ext_resource type="Script" path="res://scenes/flag4.gd" id="7_wh8jw"]
+[ext_resource type="Script" path="res://scripts/all_cars.gd" id="8_q4mpv"]
+[ext_resource type="Script" path="res://scripts/car_dup.gd" id="9_1sp03"]
 [ext_resource type="Script" path="res://scripts/car2.gd" id="9_v0x4y"]
 [ext_resource type="Script" path="res://scripts/car3.gd" id="10_gguul"]
 [ext_resource type="PackedScene" uid="uid://beaq7e4wrtndm" path="res://scenes/Restart.tscn" id="10_u3kh5"]
@@ -4810,7 +4812,7 @@ sources/3 = SubResource("TileSetAtlasSource_q8em2")
 size = Vector2(24, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcna2"]
-size = Vector2(65, 35)
+size = Vector2(67, 35)
 
 [node name="Level4" type="Node2D"]
 
@@ -4834,69 +4836,117 @@ script = ExtResource("7_wh8jw")
 position = Vector2(2678, -147)
 shape = SubResource("RectangleShape2D_gmhbc")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("7_kxgkk")
-
-[node name="Car" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(575, -13)
-scale = Vector2(3.71875, 3.90625)
-texture = ExtResource("5_u1ptu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(573.5, -15.5)
-shape = SubResource("RectangleShape2D_rcna2")
-
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-script = ExtResource("7_kxgkk")
-
-[node name="Car2" type="Sprite2D" parent="CharacterBody2D2"]
-position = Vector2(1787, -14)
-scale = Vector2(3.71875, 3.90625)
-texture = ExtResource("5_u1ptu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-position = Vector2(1786, -16)
-shape = SubResource("RectangleShape2D_rcna2")
-
-[node name="CharacterBody2D3" type="CharacterBody2D" parent="."]
-script = ExtResource("9_v0x4y")
-
-[node name="Car3" type="Sprite2D" parent="CharacterBody2D3"]
-position = Vector2(1362, -15)
-scale = Vector2(3.71875, 3.90625)
-texture = ExtResource("5_u1ptu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D3"]
-position = Vector2(1362, -17)
-shape = SubResource("RectangleShape2D_rcna2")
-
-[node name="CharacterBody2D4" type="CharacterBody2D" parent="."]
-position = Vector2(-552, 126)
-script = ExtResource("9_v0x4y")
-
-[node name="Car4" type="Sprite2D" parent="CharacterBody2D4"]
-position = Vector2(2614, -143)
-scale = Vector2(3.71875, 3.90625)
-texture = ExtResource("5_u1ptu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D4"]
-position = Vector2(2612, -149)
-shape = SubResource("RectangleShape2D_rcna2")
-
 [node name="CanvasLayer" parent="." instance=ExtResource("10_u3kh5")]
 offset = Vector2(2.08165e-12, 2.08165e-12)
 transform = Transform2D(1, 0, 0, 1, 2.08165e-12, 2.08165e-12)
 
-[node name="CharacterBody2D5" type="CharacterBody2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("8_q4mpv")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+script = ExtResource("7_kxgkk")
+
+[node name="Car" type="Sprite2D" parent="Node2D/CharacterBody2D"]
+position = Vector2(575, -13)
+scale = Vector2(3.71875, 3.90625)
+texture = ExtResource("5_u1ptu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/CharacterBody2D"]
+position = Vector2(573.5, -15.5)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D"]
+script = ExtResource("9_1sp03")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/CharacterBody2D/Area2D"]
+position = Vector2(574, -15)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="Node2D"]
+script = ExtResource("9_v0x4y")
+
+[node name="Car2" type="Sprite2D" parent="Node2D/CharacterBody2D2"]
+position = Vector2(1787, -14)
+scale = Vector2(3.71875, 3.90625)
+texture = ExtResource("5_u1ptu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D2"]
+position = Vector2(1786, -16)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D2"]
+script = ExtResource("9_1sp03")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D2/Area2D"]
+position = Vector2(1786, -16)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="Node2D"]
+script = ExtResource("9_v0x4y")
+
+[node name="Car3" type="Sprite2D" parent="Node2D/CharacterBody2D3"]
+position = Vector2(1362, -15)
+scale = Vector2(3.71875, 3.90625)
+texture = ExtResource("5_u1ptu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D3"]
+position = Vector2(1362, -17)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D3"]
+script = ExtResource("9_1sp03")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D3/Area2D"]
+position = Vector2(1362, -17)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="CharacterBody2D4" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(-552, 126)
 script = ExtResource("10_gguul")
 
-[node name="Car5" type="Sprite2D" parent="CharacterBody2D5"]
+[node name="Car4" type="Sprite2D" parent="Node2D/CharacterBody2D4"]
+position = Vector2(2614, -143)
+scale = Vector2(3.71875, 3.90625)
+texture = ExtResource("5_u1ptu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D4"]
+position = Vector2(2612, -149)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D4"]
+script = ExtResource("9_1sp03")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D4/Area2D"]
+position = Vector2(2612, -149)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_rcna2")
+
+[node name="CharacterBody2D5" type="CharacterBody2D" parent="Node2D"]
+script = ExtResource("7_kxgkk")
+
+[node name="Car5" type="Sprite2D" parent="Node2D/CharacterBody2D5"]
 position = Vector2(1017, -15)
 scale = Vector2(3.71875, 3.90625)
 texture = ExtResource("5_u1ptu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D5"]
 position = Vector2(1014, -21)
 shape = SubResource("RectangleShape2D_rcna2")
 
+[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D5"]
+script = ExtResource("9_1sp03")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D5/Area2D"]
+position = Vector2(1014, -21)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_rcna2")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CharacterBody2D/Area2D" to="Node2D/CharacterBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CharacterBody2D2/Area2D" to="Node2D/CharacterBody2D2/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CharacterBody2D3/Area2D" to="Node2D/CharacterBody2D3/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CharacterBody2D4/Area2D" to="Node2D/CharacterBody2D4/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CharacterBody2D5/Area2D" to="Node2D/CharacterBody2D5/Area2D" method="_on_body_entered"]

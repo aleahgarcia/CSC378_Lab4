@@ -1,9 +1,14 @@
 extends CharacterBody2D
 
+var initial_position = Vector2(0,0)
+
 func _ready():
-	pass
+	initial_position = position
 
 func _process(delta):
-	# Move left
-	velocity.x = -106 # Adjust the speed as needed
+	velocity.x = -105
 	move_and_collide(velocity * delta)
+
+func reset_position():
+	var character_body = get_parent()
+	character_body.reset_all_cars()

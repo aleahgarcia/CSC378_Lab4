@@ -97,3 +97,15 @@ func ending() -> void:
 
 func _on_area_2d_body_entered(body):
 	pass # Replace with function body.
+
+
+func _on_character_body_2d_mouse_entered():
+	pass # Replace with function body.
+
+
+func _on_character_body_2d_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_body_entered(body):
+	pass # Replace with function body.
