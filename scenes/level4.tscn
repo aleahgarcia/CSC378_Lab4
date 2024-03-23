@@ -4860,7 +4860,7 @@ script = ExtResource("9_1sp03")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/CharacterBody2D/Area2D"]
 position = Vector2(574, -15)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.07, 1.07)
 shape = SubResource("RectangleShape2D_rcna2")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Node2D"]
@@ -4880,7 +4880,7 @@ script = ExtResource("9_1sp03")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D2/Area2D"]
 position = Vector2(1786, -16)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.07, 1.07)
 shape = SubResource("RectangleShape2D_rcna2")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="Node2D"]
@@ -4900,7 +4900,7 @@ script = ExtResource("9_1sp03")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D3/Area2D"]
 position = Vector2(1362, -17)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.07, 1.07)
 shape = SubResource("RectangleShape2D_rcna2")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="Node2D"]
@@ -4921,7 +4921,7 @@ script = ExtResource("9_1sp03")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D4/Area2D"]
 position = Vector2(2612, -149)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.07, 1.07)
 shape = SubResource("RectangleShape2D_rcna2")
 
 [node name="CharacterBody2D5" type="CharacterBody2D" parent="Node2D"]
@@ -4941,7 +4941,7 @@ script = ExtResource("9_1sp03")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D5/Area2D"]
 position = Vector2(1014, -21)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.07, 1.07)
 shape = SubResource("RectangleShape2D_rcna2")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
